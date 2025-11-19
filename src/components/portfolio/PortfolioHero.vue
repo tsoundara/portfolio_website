@@ -21,9 +21,8 @@ const props = defineProps({
 .hero {
   border: 1px solid black;
   border-radius: 15px;
-  min-height: 250px;
+  height: 150px;
   min-width: 300px;
-  max-width: 100%;
   flex-grow: 1;
   background-size: cover;
   display: flex;

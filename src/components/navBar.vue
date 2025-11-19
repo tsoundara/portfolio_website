@@ -44,5 +44,9 @@ div.container {
     }
 
   }
+    @media (width > 600px) {
+      /* Overrides the flex-direction of column on div.links */
+      flex-direction: row;
+    }
 }
 </style>
