@@ -1,27 +1,39 @@
+
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import NavBar from '@/components/navBar.vue'
 </script>
 
 <template>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-  <RouterView />
+  <section class="container">
+    <header>
+      <nav-bar/>
+    </header>
+    <section class="content">
+      <router-view></router-view>
+    </section>
+
+    <footer>Made by Tommy</footer>
+  </section>
 </template>
 
 <style scoped>
-nav{
-  border-bottom: solid slategray 1px;
-  align-content: center;
+section.container {
   display: flex;
-  flex-direction: row;
-  gap: 100px;
-  justify-content: space-evenly;
-  font-size:90px;
-  font-family: Rockwell;
-  text-decoration:none
+  flex-direction: column;
+  gap: 10px;
+
+
+  .content {
+    background-color: white;
+    color: black;
+
+  }
+
+  footer {
+    text-align: center;
+    background-color: gray;
+    color: white;
+  }
+
 }
 </style>
