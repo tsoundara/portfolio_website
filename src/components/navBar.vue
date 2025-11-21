@@ -22,7 +22,8 @@ div.container {
   justify-content:center;
   gap: 10px;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border:black 1px solid;
   div.links {
     display: flex;

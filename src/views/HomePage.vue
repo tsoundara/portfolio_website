@@ -7,12 +7,6 @@ const featuredItems = [portfolioData[0], portfolioData[1], portfolioData[2], por
 
 <template>
 <section class="intro">
-  <section class="intro-header">
-    Welcome to my portfolio!
-  </section>
-  <section class="hero_elements">
-    <hero-container :is-responsive="true" :items="featuredItems" />
-  </section>
 
 </section>
 </template>
