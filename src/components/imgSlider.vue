@@ -15,13 +15,13 @@ export default defineComponent( {
 <template>
   <Splide :options="{ rewind: true }" aria-label="Self Logo Design">
     <SplideSlide>
-      <img src="@/assets/WebPhoto1.jpg" alt="Sample 1">
+      <img src="@/assets/selfLogoDesign/WebPhoto1.jpg" alt="Sample 1">
     </SplideSlide>
     <SplideSlide>
-      <img src="@/assets/WebPhoto2.jpg" alt="Sample 2">
+      <img src="@/assets/selfLogoDesign/WebPhoto2.jpg" alt="Sample 2">
     </SplideSlide>
     <SplideSlide>
-      <img src="@/assets/WebPhoto3.jpg" alt="Sample 3">
+      <img src="@/assets/selfLogoDesign/WebPhoto3.jpg" alt="Sample 3">
     </SplideSlide>
   </Splide>
 </template>

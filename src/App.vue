@@ -17,13 +17,14 @@ import NavBar from '@/components/navBar.vue'
 
 <style scoped>
 section.container {
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
 
 
   .content {
-    background-color: white;
+    background-color: lightgray;
     color: black;
 
   }

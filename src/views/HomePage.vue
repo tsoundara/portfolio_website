@@ -1,43 +1,10 @@
 <script setup>
+import buttonScramble from '@/components/buttonScramble.vue';
 </script>
 
 <template>
-<section class="intro">
-
-</section>
+  <buttonScramble/>
 </template>
 
 <style scoped>
-section.intro{
-  background-color: rgb(32, 30, 30);
-  border: black 1px solid;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  //.intro-header{
-  //  color: white;
-  //  border: red 1px solid;
-  //  display: flex;
-  //  height:20vh;
-  //  font-family: Rockwell;
-  //  font-weight: bolder;
-  //  font-size: 80px;
-  //  align-items: center;
-  //  text-align: center;
-  //  justify-content: space-around;
-  //}
-  //.hero_elements{
-  //  border: blue 1px solid;
-  //  display: flex;
-  //  flex-direction: column;
-  //  align-content: center;
-  //  align-items: center;
-  //  gap: 20px;
-  //  padding-left: 10px;
-  //  padding-right: 10px;
-  //  width: 98vw;
-  //}
-}
 </style>
