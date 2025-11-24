@@ -8,7 +8,9 @@ import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 gsap.registerPlugin(ScrambleTextPlugin);
 
 const scramble = ref(null);
-const scramble2 = ref(null);
+const title1 = ref(null);
+const title2 = ref(null);
+const title3 = ref(null);
 let ctx;
 
 onMounted(() => {
@@ -16,7 +18,7 @@ onMounted(() => {
     // Target the specific header element referenced by mainHeader
     gsap.to(scramble.value, {
       scrambleText: {
-        text: "Hi, I'm Tommy 	&#128512;", // The text it will scramble *into*
+        text: "Tommy Soundara", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -24,9 +26,29 @@ onMounted(() => {
       duration: 3, // Total duration of the animation
       ease: "power2.inOut"
     });
-    gsap.to(scramble2.value, {
+    gsap.to(title1.value, {
       scrambleText: {
-        text: "A Graphic Designer", // The text it will scramble *into*
+        text: "Graphic & UX/UI Designer", // The text it will scramble *into*
+        chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
+        speed: 0.5, // Slower speed
+        revealDelay: 0.5
+      },
+      duration: 3, // Total duration of the animation
+      ease: "power2.inOut"
+    });
+    gsap.to(title2.value, {
+      scrambleText: {
+        text: "Music Enjoyer", // The text it will scramble *into*
+        chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
+        speed: 0.5, // Slower speed
+        revealDelay: 0.5
+      },
+      duration: 3, // Total duration of the animation
+      ease: "power2.inOut"
+    });
+    gsap.to(title3.value, {
+      scrambleText: {
+        text: "Wowowowowo", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -46,29 +68,42 @@ onUnmounted(() => {
 <template>
   <header>
     <section ref="scramble" class="scrambledText"></section>
-    <section ref="scramble2" class="scrambledText"></section>
-    <div>
-      <router-link :to="{name: 'home'}" ref="homeLink" class="scrambled-home2">Home</router-link>
-    </div>
-
+    <section class="titles">
+      <section ref="title1" class="scrambledText2"></section>
+      <section ref="title2" class="scrambledText2"></section>
+      <section ref="title3" class="scrambledText2"></section>
+    </section>
   </header>
 </template>
 
 <style scoped>
+header{
+  border: 1px blue solid;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .titles{
+    font-family: "Impact",sans-serif;
+    height: 20%;
+    width: 40%;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    border:solid red 1px;
+  }
+}
+
 /* Optional CSS to prevent the original text from flashing before animation */
 .scrambledText {
   display: flex;
   color: green;
   justify-content: center;
   font-size: 100px;
-  /* visibility: hidden; */
+  font-weight: bold;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Monospace fonts often look good with scramble effects */
 }
-.scrambled-home2 {
-  display: flex;
-  justify-content: center;
 
-  /* visibility: hidden; */
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Monospace fonts often look good with scramble effects */
-}
 </style>

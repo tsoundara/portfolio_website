@@ -1,5 +1,6 @@
 
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <div class="container">
@@ -45,9 +46,6 @@ div.container {
     }
 
   }
-    @media (width > 600px) {
-      /* Overrides the flex-direction of column on div.links */
-      flex-direction: row;
-    }
+
 }
 </style>

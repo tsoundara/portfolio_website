@@ -17,22 +17,27 @@ import NavBar from '@/components/navBar.vue'
 
 <style scoped>
 section.container {
-  background-color: lightgray;
   display: flex;
   flex-direction: column;
   /* gap: 10px; */
 
 
   .content {
-    background-color: lightgray;
+
     color: black;
 
   }
 
   footer {
     text-align: center;
-    background-color: gray;
-    color: white;
+    color: black;
+    border-top:2px dashed black;
+    padding: 16px;
+  }
+
+  @media (min-width < 500px){
+    display:flex;
+    flex-direction: column;
   }
 
 }

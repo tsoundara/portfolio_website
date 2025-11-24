@@ -7,4 +7,5 @@ import buttonScramble from '@/components/buttonScramble.vue';
 </template>
 
 <style scoped>
+
 </style>

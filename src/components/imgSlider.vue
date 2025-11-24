@@ -23,6 +23,21 @@ export default defineComponent( {
     <SplideSlide>
       <img src="@/assets/selfLogoDesign/WebPhoto3.jpg" alt="Sample 3">
     </SplideSlide>
+    <SplideSlide>
+      <img src="@/assets/selfLogoDesign/WebPhoto4.jpg" alt="Sample 4">
+    </SplideSlide>
+    <SplideSlide>
+      <img src="@/assets/selfLogoDesign/WebPhoto5.jpg" alt="Sample 5">
+    </SplideSlide>
+    <SplideSlide>
+      <img src="@/assets/selfLogoDesign/WebPhoto6.jpg" alt="Sample 6">
+    </SplideSlide>
+    <SplideSlide>
+      <img src="@/assets/selfLogoDesign/WebPhoto7.jpg" alt="Sample 7">
+    </SplideSlide>
+    <SplideSlide>
+      <img src="@/assets/selfLogoDesign/WebPhoto4.jpg" alt="Sample 4">
+    </SplideSlide>
   </Splide>
 </template>
 
