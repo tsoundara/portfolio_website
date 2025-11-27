@@ -92,14 +92,14 @@ header{
     flex-direction: column;
     display: flex;
     gap: 10px;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
 /* Optional CSS to prevent the original text from flashing before animation */
 .scrambledText {
   display: flex;
-  color: green;
+  color: rgb(255, 255, 255);
   justify-content: center;
   font-size: 100px;
   font-weight: bold;
