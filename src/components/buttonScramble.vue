@@ -30,7 +30,7 @@ onMounted(() => {
       scrambleText: {
         text: "Graphic & UX/UI Designer", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
-        speed: 0.5, // Slower speed
+        speed: 1, // Slower speed
         revealDelay: 0.5
       },
       duration: 3, // Total duration of the animation
@@ -48,7 +48,7 @@ onMounted(() => {
     });
     gsap.to(title3.value, {
       scrambleText: {
-        text: "Wowowowowo", // The text it will scramble *into*
+        text: "Big Chiller", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -82,17 +82,17 @@ header{
   height: 85vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   .titles{
     font-family: "Impact",sans-serif;
     height: 20%;
-    width: 40%;
+    width: 31%;
     align-content: center;
     flex-direction: column;
     display: flex;
     gap: 10px;
     font-size: 20px;
-    border:solid red 1px;
   }
 }
 
