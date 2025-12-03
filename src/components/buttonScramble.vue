@@ -28,7 +28,7 @@ onMounted(() => {
     });
     gsap.to(title1.value, {
       scrambleText: {
-        text: "Graphic & UX/UI Designer", // The text it will scramble *into*
+        text: "Graphic & Interface Designer", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 1, // Slower speed
         revealDelay: 0.5
@@ -78,7 +78,7 @@ onUnmounted(() => {
 
 <style scoped>
 header{
-  border: 1px blue solid;
+
   height: 85vh;
   display: flex;
   justify-content: center;

@@ -32,13 +32,13 @@ div.container {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    border: green 1px solid;
+    /* border: green 1px solid; */
 
     a {
       color: rgb(255, 255, 255);
       text-decoration: none;
       padding: 5px;
-      border: red 1px solid;
+      /* border: red 1px solid; */
       border-radius: 10px;
 
       &:hover {

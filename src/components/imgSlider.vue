@@ -35,9 +35,6 @@ export default defineComponent( {
     <SplideSlide>
       <img src="@/assets/selfLogoDesign/WebPhoto7.jpg" alt="Sample 7">
     </SplideSlide>
-    <SplideSlide>
-      <img src="@/assets/selfLogoDesign/WebPhoto4.jpg" alt="Sample 4">
-    </SplideSlide>
   </Splide>
 </template>
 

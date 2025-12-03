@@ -24,13 +24,13 @@ section.container {
 
   .content {
     color: black;
-    background-color: rgb(219, 174, 105);
+    background-color: rgb(133, 122, 107);
   }
-
   footer {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: black;
     border-top:2px dashed black;
+    background-color: darkgray;
     padding: 50px;
   }
 }

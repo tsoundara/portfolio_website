@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
   section.containerProject1 {
-    border: 1px orange solid;
+    border: 1px black solid;
     height: 563px;
     display: flex;
     flex-direction: row;
@@ -56,18 +56,18 @@ export default {
 
 
     .containerItems{
-      border: 1px red solid;
+
       width: 1000px;
     }
   }
   section.containerProject2 {
-    border: 1px orange solid;
+
     height: 563px;
     display: flex;
     flex-direction: row;
 
     .containerItems{
-      border: 1px red solid;
+
       width: 1000px;
     }
   }
@@ -77,13 +77,14 @@ export default {
     font-size: 40px;
     display: flex;
     flex-direction: column;
-    border:rgb(0, 0, 0) solid 10px;
+
     width: 70vw;
     padding-left: 30px;
     font-family: sans-serif;
 
     .headerText{
       border: 1px green solid;
+      width: 80%;
       h1{
         font-size: 48px;
         margin: 0;
@@ -98,6 +99,7 @@ export default {
       border: 1px purple solid;
       font-size: 18px;
       margin-top: 20px;
+      width: 80%;
     }
   }
 </style>
