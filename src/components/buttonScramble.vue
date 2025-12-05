@@ -38,7 +38,7 @@ onMounted(() => {
     });
     gsap.to(title2.value, {
       scrambleText: {
-        text: "Music Enjoyer", // The text it will scramble *into*
+        text: "AAAAAAAAAAAAA", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -48,7 +48,7 @@ onMounted(() => {
     });
     gsap.to(title3.value, {
       scrambleText: {
-        text: "Big Chiller", // The text it will scramble *into*
+        text: "OOOOOOOOOO", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -77,33 +77,58 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-header{
-
-  height: 85vh;
+header {
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .titles{
-    font-family: "Impact",sans-serif;
-    height: 20%;
-    width: 31%;
-    align-content: center;
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    font-size: 30px;
-  }
+
+  /* --- SVG BACKGROUND STYLE--- */
+  background-image: url("@/assets/stacked-steps-haikei.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-/* Optional CSS to prevent the original text from flashing before animation */
+
+.titles {
+  font-family: "Impact", sans-serif;
+  height: auto;
+  width: 70%;
+  align-content: center;
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
 .scrambledText {
   display: flex;
   color: rgb(255, 255, 255);
   justify-content: center;
-  font-size: 100px;
   font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Monospace fonts often look good with scramble effects */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10vw;
+  max-font-size: 100px;
 }
 
+/* Desktop/Tablet Styles */
+@media (min-width: 768px) {
+  header {
+    height: 85vh;
+  }
+  .titles {
+    height: 20%;
+    width: 31%;
+    gap: 10px;
+    font-size: 30px;
+    text-align: left;
+  }
+  .scrambledText {
+    font-size: 100px;
+  }
+}
 </style>

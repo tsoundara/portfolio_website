@@ -16,7 +16,6 @@
 </template>
 
 <style scoped>
-
 div.container {
   display: flex;
   flex-direction: row;
@@ -25,29 +24,34 @@ div.container {
   padding-top: 5px;
   padding-bottom: 5px;
   border:black 1px solid;
-  div.links {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    /* border: green 1px solid; */
+}
 
-    a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-      padding: 5px;
-      /* border: red 1px solid; */
-      border-radius: 10px;
+div.links {
+  display: flex;
+  flex-direction: row;
+  /* Default (Mobile-First) styles */
+  gap: 15px; /* Smaller gap for mobile */
+  font-size: 20px; /* Smaller font size for mobile */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 
-      &:hover {
-        color: blue;
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
 
-      }
+    &:hover {
+      color: blue;
     }
-
   }
+}
 
+/* Desktop/Tablet Styles */
+@media (min-width: 768px) {
+  div.links {
+    gap: 30px; /* Restore desktop gap */
+    font-size: 30px; /* Restore desktop font size */
+  }
 }
 </style>

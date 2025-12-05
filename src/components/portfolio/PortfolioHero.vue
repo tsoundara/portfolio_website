@@ -1,42 +1,41 @@
 <script setup>
+import PortfolioHero from './PortfolioHero.vue'
+
 const props = defineProps({
-  thumbnail: {
-    type: String,
+  items: {
+    type: Array,
     required: true,
   },
-  title: {
-    type: String,
+  isResponsive: {
+    type: Boolean,
     required: true,
-  }
+  },
 })
 </script>
 
 <template>
-  <div class="hero" :style="`background-image: url(./src/assets/${props.thumbnail})`">
-    <div class="opaque-footer">{{ props.title}}</div>
+  <div v-if="items.length > 0" class="all-items" :class="{ 'non-responsive': !isResponsive }">
+    <portfolio-hero
+      v-for="item in props.items"
+      :key="item.id"
+      :thumbnail="item.thumbnail"
+      :title="item.title"
+    />
   </div>
+
+  <p v-else>You gotta give me something to work with!</p>
 </template>
 
 <style scoped>
-.hero {
-  border: 1px solid black;
-  border-radius: 15px;
-  height: 150px;
-  min-width: 300px;
-  flex-grow: 1;
-  background-size: cover;
+div.all-items {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-  .opaque-footer {
-    background-color: black;
-    color: white;
-    padding: 16px;
-    text-transform: uppercase;
-    opacity: 0.7;
-    border-radius: 0 0 15px 15px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+div.non-responsive {
+  overflow: scroll;
+  flex-wrap: nowrap;
 }
 </style>
