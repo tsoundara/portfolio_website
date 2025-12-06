@@ -28,7 +28,7 @@ onMounted(() => {
     });
     gsap.to(title1.value, {
       scrambleText: {
-        text: "Graphic & Interface Designer", // The text it will scramble *into*
+        text: "Graphic Designer", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 1, // Slower speed
         revealDelay: 0.5
@@ -83,17 +83,14 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  /* --- SVG BACKGROUND STYLE--- */
-  background-image: url("@/assets/stacked-steps-haikei.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 
 .titles {
-  font-family: "Impact", sans-serif;
+  font-family: "Stack Sans Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: rgb(255, 225, 168);
   height: auto;
   width: 70%;
   align-content: center;
@@ -110,9 +107,10 @@ header {
   color: rgb(255, 255, 255);
   justify-content: center;
   font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Stack Sans Notch", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-size: 10vw;
-  max-font-size: 100px;
 }
 
 /* Desktop/Tablet Styles */

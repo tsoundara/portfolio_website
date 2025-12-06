@@ -4,7 +4,10 @@
     "title": "Project Title 1",
     "subtitle": "Subtitle or Tagline for Project 1",
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the first project.",
-    "layout": "image-left"
+    "layout": "image-right",
+    "role": "Something",
+    "year": "2023"
+
 
   },
   {
@@ -12,6 +15,35 @@
     "title": "Project Title 2",
     "subtitle": "Subtitle or Tagline for Project 2",
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the second project.",
-    "layout": "image-right"
+    "layout": "image-left",
+    "role": "Something",
+    "year": "2023"
+  },
+  {
+    "id": 3,
+    "title": "Project Title 3",
+    "subtitle": "Subtitle or Tagline for Project 3",
+    "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the third project.",
+    "layout": "image-right",
+    "role": "Something",
+    "year": "2023"
+  },
+  {
+    "id": 4,
+    "title": "Project Title 4",
+    "subtitle": "Subtitle or Tagline for Project 4",
+    "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the fourth project.",
+    "layout": "image-left",
+   "role": "Something",
+    "year": "2023"
+  },
+  {
+    "id": 5,
+    "title": "Project Title 5",
+    "subtitle": "Subtitle or Tagline for Project 5",
+    "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the fifth project.",
+    "layout": "image-right",
+    "role": "Something",
+    "year": "2023"
   }
 ]

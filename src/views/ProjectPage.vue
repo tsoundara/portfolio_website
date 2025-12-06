@@ -6,16 +6,24 @@ const getSliderComponent = (projectId) => {
   if (projectId === 1) {
     return imgSlider2;
   }
-  // If Project ID is 2, use imgSlider (based on your original template)
   if (projectId === 2) {
     return imgSlider;
+  }
+  if (projectId === 3) {
+    return imgSlider2;
+  }
+  if (projectId === 4) {
+    return imgSlider;
+  }
+  if (projectId === 5) {
+    return imgSlider2;
   }
   // Default to imgSlider if ID is unknown
   return imgSlider;
 };
 </script>
 
-<template>
+<!-- <template>
   <section
     v-for="project in projects"
     :key="project.id"
@@ -50,6 +58,42 @@ const getSliderComponent = (projectId) => {
         <component :is="getSliderComponent(project.id)"/>
       </section>
     </template>
+  </section> -->
+
+
+  <!-- <section  v-for="project in projects" :key="project.id" class="nik-layout" :class="['containerProject', project.layout]">
+    <div class="block" :class="{'reverse': project.layout === 'image-right'}">
+      <div >
+        <img src="@/assets/selfLogoDesign/WebPhoto1.jpg" alt="Sample 1">
+        <component :is="getSliderComponent(project.id)" class="imgSliderComp"/>
+      </div>
+      <div>
+        <h1 v-text="project.title"/>
+        <h2 v-text="project.subtitle"/>
+        <p class="bodyText" v-text="project.description"/>
+      </div>
+    </div>
+  </section> -->
+
+
+<template>
+  <section v-for="project in projects" :key="project.id" :class="['containerProject', project.layout]">
+
+    <section class="containerItems">
+      <component :is="getSliderComponent(project.id)"/>
+    </section>
+
+    <section class="containerDescription">
+      <section class="headerText">
+        <h1>{{ project.title }}</h1>
+        <h2>{{ project.subtitle }}</h2>
+        <h3>Role:{{project.role}}</h3>
+        <h3>{{project.year}}</h3>
+      </section>
+      <section class="bodyText">
+        <p>{{ project.description }}</p>
+      </section>
+    </section>
   </section>
 </template>
 
@@ -66,12 +110,36 @@ export default {
 </script>
 
 <style scoped>
+/* section.nik-layout {
+border: 10px solid blue;
+display: flex;
+flex-direction: column;
+
+  div.block {
+    display: flex;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    div {
+      flex-basis: 50%;
+      border: 5px solid red;
+
+      .imgSliderComp {
+        width: 1000px;
+      }
+    }
+  }
+} */
+
+
 
 section.containerProject {
   height: auto;
   display: flex;
   flex-direction: column;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   margin-bottom: 40px;
   padding: 10px;
 }
@@ -91,6 +159,7 @@ section.containerProject {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 /* Text blocks use responsive width and are centered */
@@ -104,15 +173,23 @@ section.containerProject {
 
 .containerDescription .headerText h1 {
   font-size: 32px;
+  color: rgb(226, 109, 92);
   margin: 0;
 }
 .containerDescription .headerText h2 {
   font-size: 18px;
+  color: rgb(201, 203, 163);
+  margin: 0;
+}
+.containerDescription .headerText h3 {
+  font-size: 16px;
+  color: rgb(100, 100, 100);
   margin: 0;
 }
 .containerDescription .bodyText {
 
-  font-size: 16px;
+  font-size: 13px;
+  color: black;
   margin-top: 10px;
 }
 
