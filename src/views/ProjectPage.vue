@@ -2,7 +2,7 @@
 import projectsData from '@/data/portfolio.json';
 const projects = projectsData;
 const getSliderComponent = (projectId) => {
-  // If Project ID is 1, use imgSlider2 (based on your original template)
+  // If Project ID is 1, use imgSlider2 component
   if (projectId === 1) {
     return imgSlider2;
   }
@@ -145,24 +145,22 @@ section.containerProject {
 }
 
 .containerItems {
-  /* Image slider takes full width on mobile, centered */
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .containerDescription {
-  width: 100%; /* Description takes full width on mobile */
+  width: 100%;
   padding: 0;
   font-family: sans-serif;
-  font-size: 16px; /* Smaller base font size for mobile */
+  font-size: 16px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
-/* Text blocks use responsive width and are centered */
 .containerDescription .headerText,
 .containerDescription .bodyText {
   width: 90%;
@@ -195,21 +193,17 @@ section.containerProject {
 
 @media (min-width: 768px) {
   section.containerProject {
-    /* Restore row layout for larger screens (default: image-left) */
     flex-direction: row;
-    /* Restore fixed height, or use a responsive height like 80vh */
     height: 563px;
     margin-bottom: 0;
   }
 
-  /* Projects with "image-right" layout defined in JSON */
   section.containerProject.image-right {
     /* Reverse the order so Description is first, Image is second */
     flex-direction: row-reverse;
   }
 
   .containerItems {
-    /* Restore fixed width for larger screens (or keep it flexible if desired) */
     width: 1000px;
     margin: 0; /* Remove centering margin */
   }
@@ -218,7 +212,7 @@ section.containerProject {
     /* Restore layout widths and padding */
     width: 70vw;
     padding-left: 30px;
-    font-size: 40px; /* Restore desktop font size */
+    font-size: 40px; /* desktop font size */
     margin-top: 0;
   }
 
@@ -226,7 +220,7 @@ section.containerProject {
   .containerDescription .headerText,
   .containerDescription .bodyText {
     width: 80%;
-    margin: 0; /* Remove auto margins */
+    margin: 0;
   }
 
   .containerDescription .headerText h1 {
