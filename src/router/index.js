@@ -3,6 +3,7 @@ import Homepage from '../views/HomePage.vue'
 import AboutMe from '../views/AboutView.vue'
 import ContactMe from '../views/ContactMe.vue'
 import ProjectPage from '../views/ProjectPage.vue'
+import ProjectDetails from '@/views/ProjectDetails.vue'
 
 
 const router = createRouter({
@@ -27,7 +28,13 @@ const router = createRouter({
       path: '/contact-me',
       name: 'contact-me',
       component: ContactMe,
-    }
+    },
+    {
+      path: "/projects/:id",
+      name: 'project-details',
+      component: ProjectDetails,
+      props: true
+    },
   ]
 })
 

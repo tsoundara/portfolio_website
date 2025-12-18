@@ -24,8 +24,7 @@ section.container {
   flex-direction: column;
   /* Use min-height to ensure it covers the screen*/
   min-height: 100vh;
-  height: auto;
-  width: 100%; /* Ensure it uses full width */
+
 
   header {
     background-color: rgba(203, 153, 126, 1);

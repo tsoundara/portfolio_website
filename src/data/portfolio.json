@@ -6,9 +6,14 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the first project.",
     "layout": "image-right",
     "role": "Something",
-    "year": "2023"
-
-
+    "year": "2023",
+    "images": ["@/assets/selfLogoDesign/WebPhoto1.jpg", 
+    "@/assets/selfLogoDesign/WebPhoto2.jpg", 
+    "@/assets/selfLogoDesign/WebPhoto3.jpg",
+    "@/assets/selfLogoDesign/WebPhoto4.jpg",
+    "@/assets/selfLogoDesign/WebPhoto5.jpg",
+    "@/assets/selfLogoDesign/WebPhoto6.jpg",
+    "@/assets/selfLogoDesign/WebPhoto7.jpg"]
   },
   {
     "id": 2,
@@ -17,7 +22,14 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the second project.",
     "layout": "image-left",
     "role": "Something",
-    "year": "2023"
+    "year": "2023",
+    "images": ["@/assets/LogoDesign/Pro_2_Pg1.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg2.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg3.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg4.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg5.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg6.jpg",
+    "@/assets/LogoDesign/Pro_2_Pg7.jpg"]
   },
   {
     "id": 3,
@@ -26,7 +38,14 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the third project.",
     "layout": "image-right",
     "role": "Something",
-    "year": "2023"
+    "year": "2023",
+    "images": ["@/assets/LogoDesign/Pro_3_Pg1.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg2.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg3.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg4.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg5.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg6.jpg",
+    "@/assets/LogoDesign/Pro_3_Pg7.jpg"]
   },
   {
     "id": 4,
@@ -35,7 +54,14 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the fourth project.",
     "layout": "image-left",
    "role": "Something",
-    "year": "2023"
+    "year": "2023",
+    "images": ["@/assets/LogoDesign/Pro_4_Pg1.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg2.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg3.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg4.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg5.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg6.jpg",
+    "@/assets/LogoDesign/Pro_4_Pg7.jpg"]
   },
   {
     "id": 5,
@@ -44,6 +70,13 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the fifth project.",
     "layout": "image-right",
     "role": "Something",
-    "year": "2023"
+    "year": "2023",
+    "images": ["@/assets/LogoDesign/Pro_5_Pg1.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg2.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg3.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg4.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg5.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg6.jpg",
+    "@/assets/LogoDesign/Pro_5_Pg7.jpg"]
   }
 ]

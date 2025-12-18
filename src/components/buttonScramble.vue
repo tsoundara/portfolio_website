@@ -38,7 +38,7 @@ onMounted(() => {
     });
     gsap.to(title2.value, {
       scrambleText: {
-        text: "AAAAAAAAAAAAA", // The text it will scramble *into*
+        text: "UX Designer", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -48,7 +48,7 @@ onMounted(() => {
     });
     gsap.to(title3.value, {
       scrambleText: {
-        text: "OOOOOOOOOO", // The text it will scramble *into*
+        text: "", // The text it will scramble *into*
         chars: "upperAndLowerCase", // Only use lowercase letters for the scramble effect
         speed: 0.5, // Slower speed
         revealDelay: 0.5
@@ -78,7 +78,7 @@ onUnmounted(() => {
 
 <style scoped>
 header {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +116,7 @@ header {
 /* Desktop/Tablet Styles */
 @media (min-width: 768px) {
   header {
-    height: 85vh;
+    height: 100vh;
   }
   .titles {
     height: 20%;
