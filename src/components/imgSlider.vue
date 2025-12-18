@@ -8,18 +8,26 @@ defineProps({
     type: Array,
     required: true
   },
-  // Optional: allows customization of the Splide label
   sliderLabel: {
     type: String,
     default: 'Project Images'
   }
 });
+/**
+ * Function to correctly resolve image paths from the assets folder
+ * for paths stored as strings in JSON.
+ */
+const getImageUrl = (imagePath) => {
+  // The path must be relative to the public/assets directory,
+  // so we remove the Vue alias.
+  return new URL(imagePath.replace('@/assets', './assets'), import.meta.url).href;
+};
 </script>
 
 <template>
   <Splide :options="{ rewind: true }" :aria-label="sliderLabel">
     <SplideSlide v-for="(path, index) in imagePaths" :key="index">
-      <img :src="path" :alt="sliderLabel + ' Slide ' + (index + 1)">
+      <img :src="getImageUrl(path)" :alt="sliderLabel + ' Slide ' + (index + 1)">
     </SplideSlide>
   </Splide>
 </template>
