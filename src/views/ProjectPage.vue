@@ -19,6 +19,17 @@ const goToDetails = (projectId) => {
     router.push({ name: 'project-details', params: { id: projectId } });
 };
 
+const getImageUrl = (imagePath) => {
+  if (imagePath) {
+    // CRITICAL FIX: Replace '@/assets' with '../assets'
+    // This tells Vite to look up one directory from src/views/ to find src/assets/
+    const correctedPath = imagePath.replace('@/', '../');
+    return new URL(correctedPath, import.meta.url).href;
+  }
+  return '';
+};
+
+
 // GSAP setup for card reveal
 onMounted(() => {
     ctx = gsap.context(() => {
@@ -59,8 +70,7 @@ onUnmounted(() => {
         :ref="el => { if (el) cardRefs[index] = el }"
       >
         <img
-          :src="project.images[0]"
-          :alt="project.title + ' Thumbnail'"
+          :src="getImageUrl(project.images[0])" :alt="project.title + ' Thumbnail'"
           class="card-image"
         >
 
@@ -74,6 +84,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+@import url("https://use.typekit.net/qyy6svf.css");
 .project-cards-area {
   max-width: 1200px;
   margin: 0 auto;
@@ -84,6 +95,9 @@ onUnmounted(() => {
 h1 {
   margin-bottom: 40px;
   font-size: 3em;
+  color: black;
+  font-family: "new-astro", sans-serif;
+  font-weight: 700;
 }
 
 .card-grid {
@@ -112,13 +126,11 @@ h1 {
 .card-image {
   width: 100%;
   height: 100%;
-  /* CRITICAL: Ensures the image covers the card without distortion */
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
 .project-card:hover .card-image {
-  /* Subtle zoom on hover */
   transform: scale(1.05);
 }
 
@@ -128,7 +140,6 @@ h1 {
   left: 0;
   width: 100%;
   padding: 15px;
-  /* Semi-transparent dark background for text readability */
   background: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: left;

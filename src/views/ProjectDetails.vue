@@ -1,11 +1,8 @@
 <script setup>
 import { computed } from 'vue';
-// Reusing the new dynamic slider component
 import ImageSlider from '@/components/imgSlider.vue';
-// Import your project data
 import projectsData from '@/data/portfolio.json';
 
-// 1. Define props, expecting 'id' from the router
 const props = defineProps({
   id: {
     type: [String, Number],
@@ -13,18 +10,13 @@ const props = defineProps({
   }
 });
 
-// 2. Computed property to find the single matching project
 const project = computed(() => {
-  // Ensure the prop ID is treated as a number for matching
   const projectId = parseInt(props.id);
+  // Find the project data by ID
   return projectsData.find(p => p.id === projectId);
 });
 
-// 3. Handle case where project is not found
-if (!project.value) {
-    console.error(`Project with ID ${props.id} not found.`);
-    // You could redirect to a 404 page or the project list here
-}
+// If project is not found, the v-if block will handle it
 </script>
 
 <template>
@@ -34,22 +26,32 @@ if (!project.value) {
       <h2>{{ project.subtitle }}</h2>
     </header>
 
+    <section class="meta-data">
+        <div class="meta-item">
+            <strong>Role:</strong> <span>{{ project.role }}</span>
+        </div>
+        <div class="meta-item">
+            <strong>Year:</strong> <span>{{ project.year }}</span>
+        </div>
+    </section>
+
     <section class="slider-area">
       <ImageSlider :image-paths="project.images" :slider-label="project.title" />
     </section>
 
     <section class="description-area">
-      <h3>Project Details</h3>
+      <h3>Project Overview</h3>
       <p>{{ project.description }}</p>
-      </section>
+    </section>
   </div>
   <div v-else class="project-not-found">
-    <h1>404: Project Not Found</h1>
-    <p>The project you are looking for does not exist.</p>
+    <h1>Project Not Found</h1>
+    <p>Please check the URL or return to the project list.</p>
   </div>
 </template>
 
 <style scoped>
+@import url("https://use.typekit.net/qyy6svf.css");
 .project-details-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -58,29 +60,56 @@ if (!project.value) {
 
 .project-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999999;
+  font-family: "new-astro", sans-serif;
+  font-weight: 700;
 }
-
 .project-header h1 {
   font-size: 3em;
-  color: #333;
+  margin: 0;
+  color:black
 }
-
 .project-header h2 {
   font-size: 1.5em;
-  color: #666;
+  color: #646464;
+  margin-top: 5px;
+}
+
+.meta-data {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.meta-item strong {
+    color: #202020;
+    margin-right: 5px;
 }
 
 .slider-area {
   margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description-area {
   padding: 20px;
-  border-top: 1px solid #ccc;
+  color: #202020;
+}
+.description-area h3 {
+    font-size: 2em;
+    border-bottom: 2px solid darkseagreen;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .description-area p {
   line-height: 1.6;
+  font-size: 1.1em;
 }
 </style>

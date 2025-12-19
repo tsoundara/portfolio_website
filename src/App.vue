@@ -37,7 +37,7 @@ section.container {
   }
 
   footer {
-    text-align: center;
+    text-align: left;
     background-color: rgb(201, 203, 163);
     color: rgba(0, 0, 0, 1);
     /* Use responsive padding (e.g., 5vw) or a smaller fixed padding for mobile */
