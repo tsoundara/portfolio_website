@@ -32,7 +32,6 @@ section.container {
 
   .content {
     color: rgba(0, 25, 38, 0.2);
-    /* Allow the content section to take up all remaining space */
     flex-grow: 1;
   }
 
@@ -40,7 +39,6 @@ section.container {
     text-align: left;
     background-color: rgb(201, 203, 163);
     color: rgba(0, 0, 0, 1);
-    /* Use responsive padding (e.g., 5vw) or a smaller fixed padding for mobile */
     padding: 20px;
   }
 }
