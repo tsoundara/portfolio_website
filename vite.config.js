@@ -4,8 +4,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
+const basePath = 'tsoundara.github.io/portfolio_website/'
+
 // https://vite.dev/config/
 export default defineConfig({
+  base: basePath,
   plugins: [
     vue(),
     vueDevTools(),
