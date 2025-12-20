@@ -19,10 +19,11 @@
 div.container {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:flex-end;
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-right: 20px;
   border-bottom:black 1px solid;
   background-color: rgb(226, 109, 92);
 }
@@ -41,7 +42,7 @@ div.links {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 5px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 
     &:hover {
       color: blue;
@@ -51,6 +52,9 @@ div.links {
 
 /* Desktop/Tablet Styles */
 @media (min-width: 768px) {
+  div.container {
+    padding-right: 40px;
+  }
   div.links {
     gap: 30px; /* Restore desktop gap */
     font-size: 30px; /* Restore desktop font size */

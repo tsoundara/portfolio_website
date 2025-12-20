@@ -10,7 +10,7 @@
 
     <section class="contact-methods">
       <div class="contact-item primary-contact">
-        <h3>Send an Email</h3>
+        <img src="../assets/SVG/email.svg" alt="Email Icon" class="custom-icon" />
         <a href="mailto:tommysoundara9@gmail.com" class="email-link">
           tommysoundara9@gmail.com
         </a>
@@ -19,8 +19,14 @@
       <div class="contact-item social-links">
         <h3>Connect with me</h3>
         <div class="links-grid">
-          <a href="https://www.linkedin.com/in/tommysoundara" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/tsoundara" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tommysoundara" target="_blank" rel="noopener noreferrer" class="link-with-icon">
+            <img src="../assets/SVG/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" class="custom-icon" />
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/tsoundara" target="_blank" rel="noopener noreferrer" class="link-with-icon">
+            <img src="../assets/SVG/github.svg" alt="GitHub Icon" class="custom-icon" />
+            <span>Github</span>
+          </a>
         </div>
       </div>
     </section>
@@ -101,5 +107,17 @@
   background-color: darkseagreen;
   color: white;
   border-color: darkseagreen;
+}
+
+.link-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Styling for the imported SVG image */
+.custom-icon {
+  width: 1.2em;         /* Set the size of the icon to match text height */
+  height: 1.2em;
 }
 </style>
