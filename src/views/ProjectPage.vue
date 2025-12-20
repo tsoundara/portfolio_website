@@ -21,8 +21,6 @@ const goToDetails = (projectId) => {
 
 const getImageUrl = (imagePath) => {
   if (imagePath) {
-    // CRITICAL FIX: Replace '@/assets' with '../assets'
-    // This tells Vite to look up one directory from src/views/ to find src/assets/
     const correctedPath = imagePath.replace('@/', '../');
     return new URL(correctedPath, import.meta.url).href;
   }
@@ -110,8 +108,8 @@ h1 {
 .project-card {
   /* Set position relative for absolute children */
   position: relative;
-  height: 300px; /* Give cards a fixed height for consistent grid look */
-  overflow: hidden; /* Hide parts of the image that go beyond the container */
+  height: 300px;
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;

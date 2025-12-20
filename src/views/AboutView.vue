@@ -57,7 +57,7 @@ h1 {
 
 /* --- Columns --- */
 .image-column {
-  flex: 1; /* Takes up 1 part of the space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -22,7 +22,6 @@ import NavBar from '@/components/navBar.vue'
 section.container {
   display: flex;
   flex-direction: column;
-  /* Use min-height to ensure it covers the screen*/
   min-height: 100vh;
 
 

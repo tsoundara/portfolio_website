@@ -12,11 +12,8 @@ const props = defineProps({
 
 const project = computed(() => {
   const projectId = parseInt(props.id);
-  // Find the project data by ID
   return projectsData.find(p => p.id === projectId);
 });
-
-// If project is not found, the v-if block will handle it
 </script>
 
 <template>
