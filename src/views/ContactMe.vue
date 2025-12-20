@@ -20,7 +20,7 @@
         <h3>Connect with me</h3>
         <div class="links-grid">
           <a href="https://www.linkedin.com/in/tommysoundara" target="_blank" rel="noopener noreferrer" class="link-with-icon">
-            <img src="../assets/SVG/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" class="custom-icon" />
+            <img src="../assets/SVG/linkedin.svg" alt="LinkedIn Icon" class="custom-icon" />
             <span>LinkedIn</span>
           </a>
           <a href="https://github.com/tsoundara" target="_blank" rel="noopener noreferrer" class="link-with-icon">
