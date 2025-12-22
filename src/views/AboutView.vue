@@ -18,7 +18,7 @@
         <h2>Graphic & UX Designer</h2>
 
         <p>
-          Hello! My name is Tommy Soundara. Welcome to my portfolio.
+          Hello! My name is Tommy Soundara. Thanks for visting and exploring my work.
         </p>
 
         <p>

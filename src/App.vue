@@ -12,7 +12,7 @@ import NavBar from '@/components/navBar.vue'
       <router-view></router-view>
     </section>
 
-    <footer>Made by Tommy</footer>
+    <footer>Made with Vue</footer>
   </section>
 </template>
 
