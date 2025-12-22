@@ -28,18 +28,37 @@ const getImageUrl = (imagePath) => {
   return finalPath;
 };
 
+// Default options for your slider (can be customized)
+const splideOptions = {
+    rewind: true,
+    perPage: 1,
+    gap: '1rem',
+    type: 'loop',
+    pagination: true,
+    arrows: true,
+};
+</script>
+
 <template>
-  <Splide :options="{ rewind: true }" :aria-label="props.sliderLabel">
-    <SplideSlide v-for="(path, index) in props.imagePaths" :key="index">
-      <img :src="getImageUrl(path)" :alt="props.sliderLabel + ' Slide ' + (index + 1)">
+  <Splide :options="splideOptions" :aria-label="props.sliderLabel">
+
+    <SplideSlide v-for="(imagePath, index) in props.imagePaths" :key="index">
+
+      <img :src="getImageUrl(imagePath)"
+           :alt="`${props.sliderLabel} Image ${index + 1}`"
+           class="slider-image" />
+
     </SplideSlide>
   </Splide>
 </template>
 
 <style scoped>
-img {
+/* You may need more specific styles here to size the slider,
+   but these basic styles ensure the image fills the slide */
+.slider-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Or set a fixed height and use object-fit: cover */
+  max-height: 60vh;
+  object-fit: contain; /* Use contain to prevent cropping */
 }
 </style>
