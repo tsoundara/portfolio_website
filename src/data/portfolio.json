@@ -63,12 +63,12 @@
     "layout": "image-right",
     "role": "Something",
     "year": "2023",
-    "images": ["@/assets/LogoDesign/Pro_5_Pg1.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg2.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg3.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg4.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg5.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg6.jpg",
-    "@/assets/LogoDesign/Pro_5_Pg7.jpg"]
+    "images": ["@/assets/LogoProject/Pro_2_Pg1.jpg",
+    "@/assets/LogoProject/Pro_2_Pg2.jpg",
+    "@/assets/LogoProject/Pro_2_Pg3.jpg",
+    "@/assets/LogoProject/Pro_2_Pg4.jpg",
+    "@/assets/LogoProject/Pro_2_Pg5.jpg",
+    "@/assets/LogoProject/Pro_2_Pg6.jpg",
+    "@/assets/LogoProject/Pro_2_Pg7.jpg"]
   }
 ]

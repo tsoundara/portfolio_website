@@ -15,8 +15,8 @@ const props = defineProps({
 
 const getImageUrl = (imagePath) => {
   if (!imagePath) return '';
-  const correctedPath = imagePath.replace('@/', '../');
-  return new URL(correctedPath, import.meta.url).href;
+  const absolutePath = imagePath.replace('@/', import.meta.env.BASE_URL);
+  return absolutePath;
 };
 </script>
 

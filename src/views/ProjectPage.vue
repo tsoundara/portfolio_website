@@ -20,11 +20,10 @@ const goToDetails = (projectId) => {
 };
 
 const getImageUrl = (imagePath) => {
-  if (imagePath) {
-    const correctedPath = imagePath.replace('@/', '../');
-    return new URL(correctedPath, import.meta.url).href;
-  }
-  return '';
+  if (!imagePath) return '';
+  const absolutePath = imagePath.replace('@/', import.meta.env.BASE_URL);
+
+  return absolutePath;
 };
 
 
