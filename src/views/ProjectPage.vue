@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import projectsData from '@/data/portfolio.json';
-import { resolveAsset } from '@/utils/assetResolver';
+
 
 // --- GSAP IMPORTS (Keep for card reveal) ---
 import { gsap } from 'gsap';
@@ -20,8 +20,10 @@ const goToDetails = (projectId) => {
     router.push({ name: 'project-details', params: { id: projectId } });
 };
 
-const getImageUrl = (imagePath) => resolveAsset(imagePath);
-
+const getImageUrl = (imagePath) => {
+  if (!imagePath) return '';
+  return `${import.meta.env.BASE_URL}${imagePath}`.replace(/\/{2,}/g, '/');
+};
 
 // GSAP setup for card reveal
 onMounted(() => {
