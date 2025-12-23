@@ -1,6 +1,7 @@
 <script setup>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
+import { resolveAsset } from '@/utils/assetResolver';
 
 const props = defineProps({
   // The prop name is correctly defined as 'imagePaths'
@@ -14,17 +15,7 @@ const props = defineProps({
   }
 });
 
-// **REVERTED FIX FOR LOCAL DEVELOPMENT (npm run dev)**
-const getImageUrl = (imagePath) => {
-  if (!imagePath) return '';
-
-  // 1. Replace the Vue alias (@/) with a relative path (e.g., '../assets/...')
-  // This helps Vite find the file relative to the component location.
-  const localPath = imagePath.replace('@/', '../');
-
-  // 2. Use Vite's standard method for resolving dynamic asset URLs locally.
-  return new URL(localPath, import.meta.url).href;
-};
+const getImageUrl = (imagePath) => resolveAsset(imagePath);
 
 const splideOptions = {
     rewind: true,

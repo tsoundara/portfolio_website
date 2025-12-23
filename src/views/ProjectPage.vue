@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useRouter } from 'vue-router'; // 1. Import router for navigation
+import { useRouter } from 'vue-router';
 import projectsData from '@/data/portfolio.json';
+import { resolveAsset } from '@/utils/assetResolver';
 
 // --- GSAP IMPORTS (Keep for card reveal) ---
 import { gsap } from 'gsap';
@@ -19,16 +20,7 @@ const goToDetails = (projectId) => {
     router.push({ name: 'project-details', params: { id: projectId } });
 };
 
-const getImageUrl = (imagePath) => {
-  if (!imagePath) return '';
-
-  // 1. Replace the Vue alias (@/) with a relative path (e.g., '../assets/...')
-  const localPath = imagePath.replace('@/', '../');
-
-  // 2. Use Vite's standard method for resolving dynamic asset URLs locally.
-  return new URL(localPath, import.meta.url).href;
-};
-
+const getImageUrl = (imagePath) => resolveAsset(imagePath);
 
 
 // GSAP setup for card reveal
