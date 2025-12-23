@@ -1,7 +1,7 @@
 <script setup>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
-import { resolveAsset } from '@/utils/assetResolver';
+
 
 const props = defineProps({
   // The prop name is correctly defined as 'imagePaths'
@@ -15,7 +15,10 @@ const props = defineProps({
   }
 });
 
-const getImageUrl = (imagePath) => resolveAsset(imagePath);
+const getImageUrl = (imagePath) => {
+  if (!imagePath) return '';
+  return `${import.meta.env.BASE_URL}${imagePath.replace(/^\/+/, '')}`;
+};
 
 const splideOptions = {
     rewind: true,

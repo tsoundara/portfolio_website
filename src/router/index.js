@@ -5,10 +5,10 @@ import ContactMe from '../views/ContactMe.vue'
 import ProjectPage from '../views/ProjectPage.vue'
 import ProjectDetails from '@/views/ProjectDetails.vue'
 
-const BASE_URL = '/portfolio_website/';
+// const BASE_URL = '/portfolio_website/';
 
 const router = createRouter({
-  history: createWebHistory(BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
