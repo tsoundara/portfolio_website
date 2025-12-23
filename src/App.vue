@@ -30,7 +30,6 @@ section.container {
   }
 
   .content {
-    color: rgba(0, 25, 38, 0.2);
     flex-grow: 1;
   }
 

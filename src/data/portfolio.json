@@ -38,7 +38,7 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the third project.",
     "layout": "image-right",
     "role": "Something",
-    "year": "2023",
+    "year": "2025",
     "images": ["@/assets/UMNfold/Final_PosterSIde_Web1.jpg",
     "@/assets/UMNfold/Final_InformationalSide_Web2.jpg",
     "@/assets/UMNfold/Final_Envelope_Web3.jpg"]
@@ -50,7 +50,7 @@
     "description": "This is a description of the project. It provides details about the objectives, challenges, and outcomes of the fourth project.",
     "layout": "image-left",
    "role": "Something",
-    "year": "2025",
+    "year": "2024",
     "images": ["@/assets/LabelDesign/LabelDesign-Web1.jpg",
     "@/assets/LabelDesign/LabelDesign-Web3.jpg",
     "@/assets/LabelDesign/LabelDesign-Web4.jpg"]

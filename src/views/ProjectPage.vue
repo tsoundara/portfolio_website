@@ -21,9 +21,17 @@ const goToDetails = (projectId) => {
 
 const getImageUrl = (imagePath) => {
   if (!imagePath) return '';
-  const absolutePath = imagePath.replace('@/', import.meta.env.BASE_URL);
 
-  return absolutePath;
+  // 1. Replace the Vue alias (@/) with nothing:
+  //    e.g., @/assets/LogoProject/Pro_2_Pg1.jpg -> assets/LogoProject/Pro_2_Pg1.jpg
+  const relativePathFromSrc = imagePath.replace('@/', '');
+
+  // 2. Prepend the site's absolute base path (e.g., /repository-name/)
+  //    set in vite.config.js to the path.
+  //    FINAL PATH: /repository-name/assets/LogoProject/Pro_2_Pg1.jpg
+  const finalPath = import.meta.env.BASE_URL + relativePathFromSrc;
+
+  return finalPath;
 };
 
 
