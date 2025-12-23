@@ -22,17 +22,13 @@ const goToDetails = (projectId) => {
 const getImageUrl = (imagePath) => {
   if (!imagePath) return '';
 
-  // 1. Replace the Vue alias (@/) with nothing:
-  //    e.g., @/assets/LogoProject/Pro_2_Pg1.jpg -> assets/LogoProject/Pro_2_Pg1.jpg
-  const relativePathFromSrc = imagePath.replace('@/', '');
+  // 1. Replace the Vue alias (@/) with a relative path (e.g., '../assets/...')
+  const localPath = imagePath.replace('@/', '../');
 
-  // 2. Prepend the site's absolute base path (e.g., /repository-name/)
-  //    set in vite.config.js to the path.
-  //    FINAL PATH: /repository-name/assets/LogoProject/Pro_2_Pg1.jpg
-  const finalPath = import.meta.env.BASE_URL + relativePathFromSrc;
-
-  return finalPath;
+  // 2. Use Vite's standard method for resolving dynamic asset URLs locally.
+  return new URL(localPath, import.meta.url).href;
 };
+
 
 
 // GSAP setup for card reveal

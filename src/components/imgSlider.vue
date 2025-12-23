@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 
 const props = defineProps({
+  // The prop name is correctly defined as 'imagePaths'
   imagePaths: {
     type: Array,
     required: true
@@ -13,22 +14,18 @@ const props = defineProps({
   }
 });
 
+// **REVERTED FIX FOR LOCAL DEVELOPMENT (npm run dev)**
 const getImageUrl = (imagePath) => {
   if (!imagePath) return '';
 
-  // 1. Replace the Vue alias (@/) with nothing:
-  //    e.g., @/assets/LogoProject/Pro_2_Pg1.jpg -> assets/LogoProject/Pro_2_Pg1.jpg
-  const relativePathFromSrc = imagePath.replace('@/', '');
+  // 1. Replace the Vue alias (@/) with a relative path (e.g., '../assets/...')
+  // This helps Vite find the file relative to the component location.
+  const localPath = imagePath.replace('@/', '../');
 
-  // 2. Prepend the site's absolute base path (e.g., /repository-name/)
-  //    set in vite.config.js to the path.
-  //    FINAL PATH: /repository-name/assets/LogoProject/Pro_2_Pg1.jpg
-  const finalPath = import.meta.env.BASE_URL + relativePathFromSrc;
-
-  return finalPath;
+  // 2. Use Vite's standard method for resolving dynamic asset URLs locally.
+  return new URL(localPath, import.meta.url).href;
 };
 
-// Default options for your slider (can be customized)
 const splideOptions = {
     rewind: true,
     perPage: 1,
@@ -53,12 +50,10 @@ const splideOptions = {
 </template>
 
 <style scoped>
-/* You may need more specific styles here to size the slider,
-   but these basic styles ensure the image fills the slide */
 .slider-image {
   width: 100%;
-  height: auto; /* Or set a fixed height and use object-fit: cover */
-  max-height: 60vh;
-  object-fit: contain; /* Use contain to prevent cropping */
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
 }
 </style>
